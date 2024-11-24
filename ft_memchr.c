@@ -6,7 +6,7 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 16:41:55 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/17 16:25:20 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/11/23 11:46:56 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,42 +14,41 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const unsigned char *ptr;
-	size_t i;
+	const unsigned char	*ptr;
+	size_t				i;
 
 	ptr = (const unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
-		if (ptr[i] == c)
+		if (ptr[i] == (unsigned char)c)
 			return ((void *)(ptr + i));
 		i++;
 	}
 	return (NULL);
 }
 
-int main()
-{
-	char s[5] = {30, 2, 3};
+// int main()
+// {
+// 	char s[5] = {30, 2, 3};
 
-	int c = 3;
+// 	int c = 3;
 
-	size_t n = 3;
+// 	size_t n = 3;
 
-	printf("LB %p\n", (char *)memchr(s,c, n));
-	printf("FT %p\n", (char *)ft_memchr(s,c, n));
-	//value at index
-	printf("LB value %ld\n", *(char *)memchr(s,c, n));
-	printf("FT value %ld\n", *(char *)ft_memchr(s,c, n));
-	/* To determine the index (or offset) where the byte was found, 
-	we subtract the base address of the array s from the result pointer.*/
-	printf("LB index %ld\n", ((char *)memchr(s,c, n)) - s);
-	printf("FT index %ld\n", ((char *)ft_memchr(s,c, n)) - s);
-							//0x7ffff77c54dd - 0x7ffff77c54db
-	printf("Address s %p\n", s);
-	
-}
+// 	printf("LB %p\n", (char *)memchr(s,c, n));
+// 	printf("FT %p\n", (char *)ft_memchr(s,c, n));
+// 	//value at index
+// 	printf("LB value %ld\n", *(char *)memchr(s,c, n));
+// 	printf("FT value %ld\n", *(char *)ft_memchr(s,c, n));
+// 	/* To determine the index (or offset) where the byte was found, 
+// 	we subtract the base address of the array s from the result pointer.*/
+// 	printf("LB index %ld\n", ((char *)memchr(s,c, n)) - s);
+// 	printf("FT index %ld\n", ((char *)ft_memchr(s,c, n)) - s);
+// 							//0x7ffff77c54dd - 0x7ffff77c54db
+// 	printf("Address s %p\n", s);
 
+// }
 
 /*memchr is typically used when you need to search arbitrary memory blocks, 
 such as arrays of bytes, structures, or raw buffers 

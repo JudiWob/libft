@@ -6,44 +6,37 @@
 #    By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/20 15:04:29 by jpaselt           #+#    #+#              #
-#    Updated: 2024/11/20 19:10:57 by jpaselt          ###   ########.fr        #
+#    Updated: 2024/11/23 13:56:55 by jpaselt          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #1. Defining Variables
 NAME		= libft.a
-#defines a name for the executable file
-#best practise is to call this TARGET instead of NAME
-GCC			= gcc
-#defines the compiler that will be used
 
-CFLAGS		= -Wall -Wextra -Werror
-#defines compiler flags used when compiling the source files.
+CC			= gcc
 
-SOURCES			= 
-# list of all the source files (.c files) needed to build the program.
+FLAGS		= -Wall -Wextra -Werror
 
-#SRCS defines the path to the src files (.c files), 
-#only needed if MAKEFILE and .c files are in different folders
+SOURCES			= 	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c \
+					ft_memset.c  ft_bzero.c  ft_memcpy.c  ft_memmove.c  ft_strlcpy.c  ft_strlcat.c \
+					ft_toupper.c  ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c \
+					ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c \
+					ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
+					ft_putendl_fd.c ft_putnbr_fd.c \
 
 OBJS		= ${SOURCES:.c=.o}
-#defines the object files that are generated from the source .c files
 
-#HEAD 		= ./includes
+HEADER		= libft.h
 
 RM			= rm -f
-#definition of variable that contains the command rm -f (remove files)
-
-#2.
 
 all:		${NAME}
 
 .c.o:
-			${GCC} ${CFLAGS} -c -I ${HEAD} $< -o ${<:.c=.o}
+			${CC} ${FLAGS} -c $< -o ${<:.c=.o}
 
-${NAME}:	${OBJS}
-			${GCC} ${CFLAGS} -o ${NAME} ${OBJS}
-
+$(NAME):  $(OBJS)
+				ar rcs $@ $^
 clean:
 			rm -f ${OBJS}
 

@@ -1,23 +1,38 @@
-#ifndef LIBFT_H
-#define LIBFT_H
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/23 10:37:51 by jpaselt           #+#    #+#             */
+/*   Updated: 2024/11/24 13:30:03 by jpaselt          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stddef.h> 
-#include <string.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <malloc.h>
-#include <unistd.h>
+#ifndef LIBFT_H
+# define LIBFT_H
+
+# include <stddef.h> 
+# include <unistd.h>
+# include <stdlib.h>
+# include <limits.h>
+
+// typedef struct s_list
+// {
+// 	void			*content;
+// 	struct s_list	*next;
+// }					t_list;
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
-int		ft_isalpha(char c);
-int		ft_isalnum(char c);
-int		ft_isalnum(char c);
-int 	ft_isascii(int c);
-int		ft_isdigit(char c);
-int		ft_isprint(char c);
+int		ft_isalpha(int c);
+int		ft_isalnum(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isdigit(int c);
+int		ft_isprint(int c);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);

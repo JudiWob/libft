@@ -1,42 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_split.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 17:50:48 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/18 18:08:02 by jpaselt          ###   ########.fr       */
+/*   Created: 2024/11/22 18:08:45 by jpaselt           #+#    #+#             */
+/*   Updated: 2024/11/24 09:14:14 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_cpy(char *dst, const char *src, size_t size)
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	if (size == 0)
-		return (dst);
-	while (--size)
-		{
-			dst[i] = src[size - i];
-			i++;
-		}
-	dst[size] = '\0';
-	return (dst); 
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
 }
-
-int main()
-{
-	char s[] = "This is a test";
-	
-	//char c = ' ';
-	size_t size = 3;
-	char *split = (char*)malloc((size + 1) * sizeof(char));
-	split = ft_cpy(split, s, 4);
-
-	printf("Count: %s", split);
-	free(split);
-} 

@@ -6,11 +6,13 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 12:36:53 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/17 16:25:15 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/11/24 13:03:30 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char c)
+#include "libft.h"
+
+int	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }

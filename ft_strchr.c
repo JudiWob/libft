@@ -6,7 +6,7 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 20:44:51 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/17 10:55:50 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/11/24 13:20:04 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,36 +14,39 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if ((unsigned char)s[i] == (unsigned char)c)
 			return ((char *)(s + i));
 		i++;
 	}
-	if (c == '\0')
-		return((char *)(s + i)); //return 0
+	if ((unsigned char)c == '\0')
+		return ((char *)(s + i));
 	return (NULL);
 }
 
-int main()
-{
-	char *str = "Hallo";
+// ft_strchr(s, 't' + 256) == s); 
+// showLeaks();
 
-	char c = 'l';
-	
-	printf("s %s\n", ft_strchr(str, c));
-	printf("c %c\n", *ft_strchr(str, c));
-	printf("p %p", ft_strchr(str, c));
-	
-	char *ptr = ft_strchr(str, c);
-	//ptr = NULL;
-	
-	// if (ptr == NULL) {
-    //     printf("\nThe pointer is NULL.\n");
-    // } else {
-    //     printf("Pointer content: %d\n", *ptr);
-    // }
-}
+// int main()
+// {
+// 	char *str = "Hallo";
+
+// 	char c = 'l';
+
+// 	printf("s %s\n", ft_strchr(str, c));
+// 	printf("c %c\n", *ft_strchr(str, c));
+// 	printf("p %p", ft_strchr(str, c));
+
+// 	char *ptr = ft_strchr(str, c);
+// 	//ptr = NULL;
+
+// 	// if (ptr == NULL) {
+//     //     printf("\nThe pointer is NULL.\n");
+//     // } else {
+//     //     printf("Pointer content: %d\n", *ptr);
+//     // }
+// }

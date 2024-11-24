@@ -5,66 +5,41 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 10:04:17 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/19 18:55:19 by jpaselt          ###   ########.fr       */
+/*   Created: 2024/11/23 12:15:09 by jpaselt           #+#    #+#             */
+/*   Updated: 2024/11/24 13:07:10 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
-{
-	size_t	i;
-	size_t	j;
-	size_t	t;
-	size_t	count;
-	char*	trim;
+char	*ft_strtrim(char const *s1, char const *set)
 
-	i = 0;
-	j = 0;
-	t = 0;
-	count = 0;
+{
+	size_t	start;
+	size_t	end;
+
 	if (!s1 || !set)
-        return (NULL);
-	while (s1[i])//count
-	{
-		while (set[j])
-		{
-			if(s1[i] == set[j])
-				count++;
-			j++;
-		}
-		i++;
-		j = 0;
-	}
-	trim = (char*)malloc((ft_strlen(s1) - count + 1) * sizeof(char));
-	i = 0;
-	j = 0;
-	while (s1[i]) //s[i] = e
-	{
-		while (set[j]) 
-		{
-			if(s1[i] == set[j])
-				i++;
-			j++;
-		}
-		trim[t] = s1[i];
-		i++;
-		t++;
-		j = 0;
-	}
-	trim[t] = '\0';
-	return (trim);
+		return (NULL);
+	start = 0;
+	while (s1[start] && ft_strchr(set, s1[start]))
+		start++;
+	if (s1[start] == '\0')
+		return ((char *)ft_calloc(1, sizeof(char)));
+	end = ft_strlen(s1);
+	while (end > start && ft_strchr(set, s1[end]))
+		end--;
+	return (ft_substr(s1, start, end - start + 1));
 }
 
-int main()
-{
-	char s1[] = "eabcde";
-	
-	char set[] = "ace";
+// cc ft_strtrim.c ft_strchr.c   ft_strlen.c  ft_substr.c
+// int	main(void)
+// {
+// 	char s1[] = "eaeebeecdddde";
 
-	char *trim = ft_strtrim(s1, set);
+// 	char set[] = "abce";
 
-	printf("Trimmed: %s", trim);
-	free(trim);
-}
+// 	char *trim = ft_strtrim(s1, set);
+
+// 	printf("Trimmed: %s", trim);
+// 	free(trim);
+// }

@@ -6,19 +6,19 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 11:48:14 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/20 15:00:18 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/11/24 17:45:27 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		count_words(char const *s, char c);
-int		count_len(const char *s, char c);
-void	cpy(char *charr, const char *s, size_t len);
-char	**ft_split(char const *s, char c);
-char	*make_space(char *charr, int len);
+char			**ft_split(char const *s, char c);
+static int		count_len(const char *s, char c);
+static int		count_words(char const *s, char c);
+static char		*make_space(int len);
+static void		ft_free(char **charr, int j);
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	size_t	count;
 	size_t	i;
@@ -34,7 +34,7 @@ int	count_words(char const *s, char c)
 	return (count);
 }
 
-int	count_len(const char *s, char c)
+static int	count_len(const char *s, char c)
 {
 	size_t	i;
 
@@ -44,21 +44,20 @@ int	count_len(const char *s, char c)
 	return (i);
 }
 
-void	cpy(char *charr, const char *s, size_t len)
+static void	ft_free(char **charr, int j)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < len)
+	while (j > 0)
 	{
-		charr[i] = s[i];
-		i++;
+		free(charr[j - 1]);
+		j--;
 	}
-	charr[i] = '\0';
+	free(charr);
 }
 
-char	*make_space(char *charr, int len)
+static char	*make_space(int len)
 {
+	char	*charr;
+
 	charr = (char *)malloc((len + 1) * sizeof(char));
 	if (!charr)
 		return (NULL);
@@ -69,21 +68,23 @@ char	**ft_split(char const *s, char c)
 {
 	size_t	i;
 	size_t	j;
-	size_t	len;
 	char	**charr;
 
+	if (!s)
+		return (NULL);
 	charr = (char **)malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!charr)
+		return (NULL);
 	i = 0;
 	j = 0;
-	len = 0;
-	
 	while (s[i])
 	{
 		if (s[i] != c && (i == 0 || s[i - 1] == c))
 		{
-			len = count_len(s + i, c);
-			charr[j] = make_space(charr[j], len);
-			cpy(charr[j], s + i, len);
+			charr[j] = make_space(count_len(s + i, c));
+			if (!charr[j])
+				return (ft_free(charr, j), NULL);
+			ft_strlcpy(charr[j], s + i, count_len(s + i, c) + 1);
 			j++;
 		}
 		i++;
@@ -92,19 +93,22 @@ char	**ft_split(char const *s, char c)
 	return (charr);
 }
 
-int main()
-{
-	char	s[] = "word";
+// int	main(void)
+// {
+// 	char	**split;
+// 	int		j;
 
-	char	c = ' ';
+// 	// char	s[] = "word";
+// 	// char	c = ' ';
 
-	char	**split = ft_split(s, c);
-	int		j = 0;
-	while (j < 6)
-	{
-		printf("Word: %s\n", split[j]);
-		j++;
-	}
-}
+// 	split = ft_split("lorem ipsum dolor sit amet,
+// consectetur adipiscing elit. Sed non risus. Suspendisse",' ');
+// 	j = 0;
+// 	while (*(split + j))
+// 	{
+// 		printf("Word: %s\n", split[j]);
+// 		j++;
+// 	}
+// }
 //
-//static!!
+// static!!

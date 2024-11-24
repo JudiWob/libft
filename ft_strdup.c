@@ -6,7 +6,7 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 16:08:32 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/17 16:25:41 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/11/23 09:59:50 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 char	*ft_strdup(const char *s)
 {
-	size_t len;
-	size_t i;
-	char *db;
+	size_t	len;
+	size_t	i;
+	char	*db;
 
 	len = ft_strlen(s);
 	i = 0;
 	db = (char *)malloc((len + 1) * sizeof(char));
-	if (db == NULL) // Check if malloc failed
-        return (NULL);
+	if (db == NULL)
+		return (NULL);
 	while (s[i])
 	{
 		db[i] = s[i];
@@ -34,14 +34,14 @@ char	*ft_strdup(const char *s)
 
 //cc ft_strdup.c ft_strlen.c  && ./a.out 
 
-int main()
-{
-	char *s = "Double me";
+// int main()
+// {
+// 	char *s = "Double me";
 
-	char *db = ft_strdup(s);
+// 	char *db = ft_strdup(s);
 
-	printf("Double	%s\n", db);
-	printf("SRC	%s\n", s);
+// 	printf("Double	%s\n", db);
+// 	printf("SRC	%s\n", s);
 
-	free(db);
-}
+// 	free(db);
+// }

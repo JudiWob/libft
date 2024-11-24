@@ -6,59 +6,63 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 12:17:55 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/19 18:54:24 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/11/23 14:42:16 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *convert(int n, int len)
+static char	*convert(int n, int len)
 {
 	char	*itoa;
+	long	num;
 
+	num = n;
 	itoa = (char *)malloc((len + 1) * sizeof(char));
+	if (!itoa)
+		return (NULL);
 	itoa[len] = '\0';
-	while (n != 0)
+	if (num < 0)
 	{
-		itoa[len - 1] = (n % 10) + 48;
-		n = n/10;
-		len--;
-		printf("n: %d\n", n);
-	}
-	if (n < 0)
 		itoa[0] = '-';
-	
+		num *= -1;
+	}
+	if (num == 0)
+		itoa[0] = '0';
+	while (num != 0)
+	{
+		itoa[len - 1] = (num % 10) + 48;
+		num = num / 10;
+		len--;
+	}
 	return (itoa);
 }
 
-char *ft_itoa(int n) //422
+char	*ft_itoa(int n)
 {
 	size_t	len;
-	int 	num;
-	char	*itoa;
-	
+	long	num;
+
 	len = 0;
 	num = n;
-	while (num) //count len
+	if (n == 0)
+		return (convert(0, 1));
+	while (num != 0)
 	{
 		len++;
-		num = num/10;
+		num = num / 10;
 	}
 	if (n < 0)
 		len++;
-	itoa = convert(n, len);
-	return (itoa);
+	return (convert(n, len));
 }
 
+// int	main(void)
+// {
+// 	int		n;
+// 	char	*itoa;
 
-int main()
-{
-
-	int n = 422;
-	char *itoa = ft_itoa(n);
-
-	printf("ITOA: %s", itoa);
-
-	free (itoa);
-}
-
+// 	itoa = ft_itoa(INT_MIN);
+// 	printf("ITOA: %s", itoa);
+// 	free(itoa);
+// }

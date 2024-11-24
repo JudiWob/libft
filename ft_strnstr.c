@@ -6,7 +6,7 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 12:07:07 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/17 12:40:28 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/11/24 10:44:30 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,20 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
 	if (little[j] == '\0')
 		return ((char *)big);
-	while (i < len)
+	if (big[0] == '\0')
+		return (NULL);
+	if (len == (size_t)-1)
+		len = ((size_t) - 1);
+	while (i < len && big[i])
 	{
-		while (little[j] == big[i+j] && (i+j) < len)
+		while (little[j] == big[i + j] && (i + j) < len)
 		{
 			j++;
 			if (little[j] == '\0')
@@ -35,16 +39,16 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (NULL);
 }
 
-int main()
-{
-	char little[] = "fsb";
-	
-	char big[] = "Wolfsburg";
+// int main()
+// {
+// 	char little[] = "fsb";
 
-	size_t len = 9;
-	
-	char *ptr = ft_strnstr(big, little, len);
+// 	char big[] = "Wolfsburg";
 
-	printf("Ptr: %s", ptr);
-	
-}
+// 	size_t len = 9;
+
+// 	char *ptr = ft_strnstr(big, little, len);
+
+// 	printf("Ptr: %s", ptr);
+
+// }
