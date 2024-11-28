@@ -6,7 +6,7 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 15:06:06 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/24 13:21:14 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/11/28 17:03:52 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,21 +31,3 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)s + i);
 	return (NULL);
 }
-// if (c == '\0')
-	// 	return ((char *)s + i);
-// int main()
-// {
-// 	char *str = "Hallo";
-
-// 	char c = '\0';
-
-// 	printf("%s\n", ft_strrchr(str, c));
-
-// 	char *ptr = ft_strrchr(str, c);
-// 	//ptr = NULL;
-
-// 	if (ptr == NULL)
-//         printf("The pointer is NULL.\n");
-//     	else
-//         printf("Pointer content: %d\n", *ptr);
-// }

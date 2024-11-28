@@ -6,7 +6,7 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 09:09:45 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/24 13:16:25 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/11/28 17:03:39 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,26 +37,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ss[i] = '\0';
 	return (ss);
 }
-
-// int	main(void)
-// {
-// 	//char	*s;
-// 	size_t	len;
-// 	int		start;
-// 	char	*ss;
-
-// 	//s = "Aufwiedersehen";
-// 	char * s = ft_substr("tripouille", 0, 42000);
-// 	len = 14;
-// 	start = 14;
-// 	ss = ft_substr(s, start, len);
-// 	printf("SS: %s", ss);
-// 	free(ss);
-// }
-// If start is greater than or equal to the length of the string, 
-// return an empty string
-// Adjust len if it exceeds the remaining characters in the string
-/*Returns the substring of the given string 
-at the given start position with the given length 
-(or smaller if the length of the original string is less than start + length, 
-or length is bigger than MAXSTRINGLEN).*/

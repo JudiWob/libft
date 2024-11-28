@@ -6,7 +6,7 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 12:15:09 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/24 13:07:10 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/11/28 17:03:50 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	return (ft_substr(s1, start, end - start + 1));
 }
-
-// cc ft_strtrim.c ft_strchr.c   ft_strlen.c  ft_substr.c
-// int	main(void)
-// {
-// 	char s1[] = "eaeebeecdddde";
-
-// 	char set[] = "abce";
-
-// 	char *trim = ft_strtrim(s1, set);
-
-// 	printf("Trimmed: %s", trim);
-// 	free(trim);
-// }

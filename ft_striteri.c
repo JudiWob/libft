@@ -6,7 +6,7 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 17:26:25 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/24 09:13:01 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/11/28 17:03:06 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
-// int main()
-// {
-// 	char * s = 
-// 	printf(%s)
-// }

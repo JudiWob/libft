@@ -6,7 +6,7 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 12:07:07 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/24 10:44:30 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/11/28 17:03:28 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,17 +38,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-// int main()
-// {
-// 	char little[] = "fsb";
-
-// 	char big[] = "Wolfsburg";
-
-// 	size_t len = 9;
-
-// 	char *ptr = ft_strnstr(big, little, len);
-
-// 	printf("Ptr: %s", ptr);
-
-// }

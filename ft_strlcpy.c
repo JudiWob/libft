@@ -6,7 +6,7 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:17:05 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/23 11:14:00 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/11/28 17:03:17 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (ft_strlen(src));
 }
-
-// int main()
-// {
-// 	char src[] = "Hello";
-
-// 	char dst[4] ;
-
-// 	int size = sizeof(dst);
-
-// 	//strlcpy(dst, src, size); //GIBT ES NICHT!!!!
-// 	ft_strlcpy(dst, src, size);
-
-// 	printf("dst: %s", dst);
-
-// }

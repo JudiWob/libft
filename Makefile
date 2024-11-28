@@ -6,7 +6,7 @@
 #    By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/20 15:04:29 by jpaselt           #+#    #+#              #
-#    Updated: 2024/11/27 17:45:18 by jpaselt          ###   ########.fr        #
+#    Updated: 2024/11/28 17:20:44 by jpaselt          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ BONUS		=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstadd_back.c \
 
 BONUS_OBJS	= $(BONUS:.c=.o)
 
-OBJS		= ${SOURCES:.c=.o}
+OBJS		= $(SRCS:.c=.o)
 
 HEADER		= libft.h
 
@@ -49,7 +49,6 @@ bonus:		all
 
 fclean:		clean
 			${RM} ${NAME}
-
 
 re:			fclean all
 

@@ -6,7 +6,7 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 12:17:55 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/23 14:42:16 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/11/28 17:01:58 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,13 +56,3 @@ char	*ft_itoa(int n)
 		len++;
 	return (convert(n, len));
 }
-
-// int	main(void)
-// {
-// 	int		n;
-// 	char	*itoa;
-
-// 	itoa = ft_itoa(INT_MIN);
-// 	printf("ITOA: %s", itoa);
-// 	free(itoa);
-// }

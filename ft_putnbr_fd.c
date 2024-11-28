@@ -6,7 +6,7 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 18:30:12 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/22 18:41:22 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/11/28 17:02:49 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(nb / 10, fd);
 	ft_putchar_fd((nb % 10) + 48, fd);
 }
-
-// int main()
-// {
-// 	ft_putnbr_fd(422, 2);
-// }

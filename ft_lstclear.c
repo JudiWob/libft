@@ -6,7 +6,7 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 13:26:03 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/27 12:43:08 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/11/28 17:02:17 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,3 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		*lst = temp;
 	}
 }
-// del(lst->content);
-// 		free(lst);

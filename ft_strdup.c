@@ -6,7 +6,7 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 16:08:32 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/23 09:59:50 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/11/28 17:03:04 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,3 @@ char	*ft_strdup(const char *s)
 	db[i] = '\0';
 	return (db);
 }
-
-//cc ft_strdup.c ft_strlen.c  && ./a.out 
-
-// int main()
-// {
-// 	char *s = "Double me";
-
-// 	char *db = ft_strdup(s);
-
-// 	printf("Double	%s\n", db);
-// 	printf("SRC	%s\n", s);
-
-// 	free(db);
-// }

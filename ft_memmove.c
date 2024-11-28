@@ -6,7 +6,7 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 20:23:02 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/24 11:40:06 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/11/28 17:02:37 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			ptr_d[n] = ptr_s[n];
 	return (dest);
 }
-
-// cc ft_memmove.c -Wall -Wextra -Werror && ./a.out
-// int	main(void)
-// {
-// 	char src[] = "";
-// 	char src1[] = "";
-
-// 	ft_memmove(src, src, 0);
-// 	memmove(src1, src1, 0);
-
-// 	printf("FT: %s\n", src);
-// 	printf("LB: %s\n", src1);
-// }

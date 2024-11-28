@@ -6,7 +6,7 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 09:43:30 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/23 10:40:35 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/11/28 17:03:09 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new[i] = '\0';
 	return (new);
 }
-
-// int main()
-// {
-// 	char *s1 = "Hallo";
-// 	char *s2 = " und tschuess";
-
-// 	char *new = ft_strjoin(s1, s2);
-
-// 	printf("New: %s", new);
-// }

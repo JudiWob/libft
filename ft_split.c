@@ -6,7 +6,7 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 11:48:14 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/24 17:45:27 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/11/28 17:02:55 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,23 +92,3 @@ char	**ft_split(char const *s, char c)
 	charr[j] = NULL;
 	return (charr);
 }
-
-// int	main(void)
-// {
-// 	char	**split;
-// 	int		j;
-
-// 	// char	s[] = "word";
-// 	// char	c = ' ';
-
-// 	split = ft_split("lorem ipsum dolor sit amet,
-// consectetur adipiscing elit. Sed non risus. Suspendisse",' ');
-// 	j = 0;
-// 	while (*(split + j))
-// 	{
-// 		printf("Word: %s\n", split[j]);
-// 		j++;
-// 	}
-// }
-//
-// static!!

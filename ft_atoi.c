@@ -6,7 +6,7 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 12:49:40 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/24 09:03:54 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/11/28 17:01:27 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,17 +36,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (sign * result);
 }
-
-// int main()
-// {
-// 	char nptr[] = "  +0123aaa";
-// 	printf("LB Nptr %i\n", atoi(nptr));
-// 	printf("My Nptr %d", ft_atoi(nptr));
-// }
-// if (result > INT_MAX || result < INT_MIN)
-// 	{
-// 		if (sign == -1)
-// 			return (INT_MIN);
-// 		else
-// 			return (INT_MAX);
-// 	}
