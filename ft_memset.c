@@ -6,13 +6,11 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 12:54:25 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/28 17:02:42 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/12/06 13:30:52 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <string.h>
-// #include <stdio.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {

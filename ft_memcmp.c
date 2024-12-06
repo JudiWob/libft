@@ -6,13 +6,11 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 14:07:20 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/28 17:02:30 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/12/06 13:30:30 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

@@ -6,12 +6,11 @@
 /*   By: jpaselt <jpaselt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 14:49:29 by jpaselt           #+#    #+#             */
-/*   Updated: 2024/11/28 17:01:37 by jpaselt          ###   ########.fr       */
+/*   Updated: 2024/12/06 13:24:19 by jpaselt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <malloc.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
