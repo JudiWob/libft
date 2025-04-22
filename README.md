@@ -14,7 +14,6 @@ It was designed to deepen understanding of memory management, pointers, and over
 • malloc
 • free
 
-
 ## 🚀 Features
 
 The `libft` project is divided into multiple parts:
