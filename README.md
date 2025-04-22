@@ -28,4 +28,4 @@ Useful helper functions for string manipulation, memory allocation, and characte
 
 ### Bonus Part – Linked List Utilities
 Functions for managing singly linked lists:
-- `ft_lstnew`, `ft_lstadd_front`, `ft_lstsize`, `ft_lstlast`, `ft_lstdelone`, `ft_lstclear`,_
+- `ft_lstnew`, `ft_lstadd_front`, `ft_lstsize`, `ft_lstlast`, `ft_lstdelone`, `ft_lstclear`
