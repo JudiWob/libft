@@ -1,5 +1,6 @@
 # libft
 
+⭐ Validated with 125%
 🧠 My own C standard library — implemented from scratch as part of the 42 school curriculum.
 
 ## 📚 About
